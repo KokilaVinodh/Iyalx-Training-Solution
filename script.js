@@ -1,3 +1,4 @@
+```javascript
 /* =====================================================
    IYALX TRAINING WEBSITE
    Main JavaScript
@@ -9,14 +10,16 @@
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
-menuToggle.addEventListener("click", () => {
+if (menuToggle && navMenu) {
 
-  navMenu.classList.toggle("active");
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
 
-});
+}
 
 
-/* Close mobile menu when clicking a link */
+/* ================= CLOSE MOBILE MENU ================= */
 
 const navLinks = document.querySelectorAll("#navMenu a");
 
@@ -24,7 +27,9 @@ navLinks.forEach(link => {
 
   link.addEventListener("click", () => {
 
-    navMenu.classList.remove("active");
+    if (navMenu) {
+      navMenu.classList.remove("active");
+    }
 
   });
 
@@ -52,54 +57,74 @@ const formMessage =
   document.getElementById("formMessage");
 
 
-contactForm.addEventListener("submit", function(event) {
+if (contactForm) {
 
-  event.preventDefault();
+  contactForm.addEventListener("submit", function(event) {
 
-
-  const name =
-    document.getElementById("name").value.trim();
-
-  const email =
-    document.getElementById("email").value.trim();
-
-  const program =
-    document.getElementById("program").value;
-
-  const message =
-    document.getElementById("message").value.trim();
+    event.preventDefault();
 
 
-  if (!name || !email || !message) {
+    const name =
+      document.getElementById("name").value.trim();
 
-    formMessage.textContent =
-      "Please complete all required fields.";
+    const email =
+      document.getElementById("email").value.trim();
 
-    formMessage.style.color = "#b54b4b";
+    const program =
+      document.getElementById("program").value;
 
-    return;
-
-  }
-
-
-  /*
-    This is currently a front-end form.
-
-    To receive real enquiries, connect this
-    form to a service such as Formspree,
-    EmailJS, Google Forms, or your own backend.
-  */
+    const message =
+      document.getElementById("message").value.trim();
 
 
-  formMessage.textContent =
-    `Thank you, ${name}! Your enquiry has been received.`;
+    /* Validate required fields */
 
-  formMessage.style.color = "#8a682c";
+    if (!name || !email || !message) {
+
+      if (formMessage) {
+
+        formMessage.textContent =
+          "Please complete all required fields.";
+
+        formMessage.style.color = "#b54b4b";
+
+      }
+
+      return;
+
+    }
 
 
-  contactForm.reset();
+    /*
+      CONTACT FORM
 
-});
+      The current website is hosted on GitHub Pages.
+
+      GitHub Pages cannot directly send emails.
+
+      Connect this form to Formspree, EmailJS,
+      Google Forms, or another form service
+      to receive enquiries by email.
+    */
+
+
+    if (formMessage) {
+
+      formMessage.textContent =
+        `Thank you, ${name}! Your enquiry has been received.`;
+
+      formMessage.style.color = "#8a682c";
+
+    }
+
+
+    /* Clear the form */
+
+    contactForm.reset();
+
+  });
+
+}
 
 
 /* ================= SCROLL ANIMATION ================= */
@@ -148,16 +173,21 @@ const navbar =
   document.querySelector(".navbar");
 
 
-window.addEventListener("scroll", () => {
+if (navbar) {
 
-  if (window.scrollY > 40) {
+  window.addEventListener("scroll", () => {
 
-    navbar.classList.add("scrolled");
+    if (window.scrollY > 40) {
 
-  } else {
+      navbar.classList.add("scrolled");
 
-    navbar.classList.remove("scrolled");
+    } else {
 
-  }
+      navbar.classList.remove("scrolled");
 
-});
+    }
+
+  });
+
+}
+```
