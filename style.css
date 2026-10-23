@@ -680,26 +680,24 @@ nav a:hover {
 
 /* ================= COURSES ================= */
 
+
 .courses {
-  background: white;
+  background: #ffffff;
 }
 
 .section-heading {
   max-width: 700px;
-
   margin-bottom: 55px;
 }
 
 .section-heading > p {
   color: var(--muted);
-
   max-width: 580px;
 }
 
 .center {
   margin-left: auto;
   margin-right: auto;
-
   text-align: center;
 }
 
@@ -707,135 +705,89 @@ nav a:hover {
   justify-content: center;
 }
 
-
 .course-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 
-
-.course-card {
-  padding: 30px;
-
-  border: 1px solid var(--border);
-
-  border-radius: var(--radius);
-
-  position: relative;
-
-  transition: 0.35s;
-
-  background: white;
-}
-
-.course-card:hover {
-  transform: translateY(-8px);
-
-  {
-  background-color: #ffffff !important;
-  box-shadow: var(--shadow);
-  border: 1px solid #E5E7EB;
-}
-
-  border-color:
-    rgba(200,155,75,0.5);
-}
-
-
+.course-card,
 .course-card.featured {
-  background: var(--dark);
-  color: white;
-
-  border-color: var(--dark);
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  position: relative;
+  transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s;
+  background: #ffffff;
+  color: var(--text);
+  box-shadow: var(--shadow);
 }
 
+.course-card:hover,
+.course-card.featured:hover {
+  transform: translateY(-8px);
+  background: #ffffff;
+  border-color: rgba(200, 155, 75, 0.5);
+  box-shadow: var(--shadow);
+}
 
-
-
-.course-icon {
+.course-icon,
+.featured .course-icon {
   width: 55px;
   height: 55px;
-
   display: grid;
   place-items: center;
-
   border-radius: 15px;
-
   background: var(--cream);
-
   font-size: 23px;
-
   margin-bottom: 28px;
 }
 
-.featured .course-icon {
-  background: rgba(255,255,255,0.08);
-}
-
-
 .course-tag {
   font-size: 10px;
-
   color: var(--gold);
-
   font-weight: 700;
-
   letter-spacing: 1.5px;
-
   margin-bottom: 10px;
 }
 
-.course-card h3 {
+.course-card h3,
+.course-card.featured h3 {
   font-size: 22px;
-
   margin-bottom: 12px;
+  color: var(--text);
 }
 
-.course-card p {
+.course-card p,
+.course-card.featured p {
   color: var(--muted);
-
   font-size: 14px;
-
   min-height: 68px;
 }
 
-.featured p {
-  color: #aeb7c0;
-}
-
-
-.course-footer {
+.course-footer,
+.course-card.featured .course-footer {
   margin-top: 25px;
-
   padding-top: 18px;
-
-  border-top:
-    1px solid var(--border);
-
+  border-top: 1px solid var(--border);
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   font-size: 11px;
-
   color: var(--muted);
-}
-
-.featured .course-footer {
-  border-color: rgba(255,255,255,0.12);
 }
 
 .course-footer a {
   color: var(--gold);
-
   font-weight: 700;
 }
+
+/* Keep the Popular label visible */
+.course-card .popular {
+  background: var(--gold);
+  color: #ffffff;
+}
+
 
 
 /* ================= WHY US ================= */
