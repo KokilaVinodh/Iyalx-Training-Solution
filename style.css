@@ -749,18 +749,7 @@ nav a:hover {
   border-color: var(--dark);
 }
 
-.popular {
-  position: absolute;
 
-  top: 20px;
-  right: 20px;
-
-  font-size: 9px;
-
-  letter-spacing: 1px;
-
-  color: var(--gold-light);
-}
 
 
 .course-icon {
