@@ -747,10 +747,10 @@ nav a:hover {
 
 
 .course-card.featured {
-  background: var(--white);
+  background: var(--dark);
   color: white;
 
-  border-color: var(--white);
+  border-color: var(--dark);
 }
 
 
