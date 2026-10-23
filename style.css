@@ -743,10 +743,10 @@ nav a:hover {
 
 
 .course-card.featured {
-  background: var(--dark);
+  background: var(--white);
   color: white;
 
-  border-color: var(--dark);
+  border-color: var(--white);
 }
 
 
