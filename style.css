@@ -1327,25 +1327,3 @@ footer {
   box-shadow:
     0 8px 30px rgba(0, 0, 0, 0.2);
 }
-
-
-/* White background for all course cards */
-.course-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E5E7EB;
-}
-
-/* Consistent course heading colour */
-.course-card h3 {
-  color: #174A7E;
-}
-
-/* Consistent course description colour */
-.course-card p {
-  color: #36566F;
-}
-
-/* White course cards with subtle icon backgrounds */
-.course-card .course-icon {
-  background-color: #F3F4F6;
-}
