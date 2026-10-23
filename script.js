@@ -8,30 +8,31 @@
 /* ================= MOBILE MENU ================= */
 
 
-/* ================= MOBILE MENU ================= */
-
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
 if (menuToggle && navMenu) {
-  menuToggle.setAttribute("aria-expanded", "false");
 
   menuToggle.addEventListener("click", () => {
-    const isOpen = navMenu.classList.toggle("active");
-
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    navMenu.classList.toggle("active");
   });
 
-  /* Close menu when a navigation link is clicked */
-  const navLinks = navMenu.querySelectorAll("a");
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("active");
-      menuToggle.setAttribute("aria-expanded", "false");
-    });
-  });
 }
+
+
+/* ================= CLOSE MOBILE MENU ================= */
+
+const navLinks = document.querySelectorAll("#navMenu a");
+
+navLinks.forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    if (navMenu) {
+      navMenu.classList.remove("active");
+    }
+
+  });
 
 
 /* ================= FOOTER YEAR ================= */
