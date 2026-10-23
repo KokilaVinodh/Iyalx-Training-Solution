@@ -735,7 +735,7 @@ nav a:hover {
 .course-card:hover {
   transform: translateY(-8px);
 
-  box-shadow: var(--shadow);
+  box-shadow: none;
 
   border-color:
     rgba(200,155,75,0.5);
