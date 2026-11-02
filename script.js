@@ -1,192 +1,153 @@
-```javascript
-/* =====================================================
-   IYALX TRAINING WEBSITE
-   Main JavaScript
-===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  // ==============================
+  // MOBILE NAVIGATION
+  // ==============================
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector("#primary-navigation");
+
+  if (menuToggle && navMenu) {
+
+    menuToggle.addEventListener("click", function () {
+
+      const isOpen = navMenu.classList.toggle("active");
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+
+    });
+
+    // Close menu after clicking a navigation link
+    navMenu.querySelectorAll("a").forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        navMenu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+      });
+
+    });
+
+    // Close menu when pressing Escape
+    document.addEventListener("keydown", function (event) {
+
+      if (event.key === "Escape") {
+
+        navMenu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+      }
+
+    });
+
+  }
 
 
-/* ================= MOBILE MENU ================= */
+  // ==============================
+  // AUTOMATIC FOOTER YEAR
+  // ==============================
 
+  const yearElements = document.querySelectorAll("[data-year]");
 
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
-
-if (menuToggle && navMenu) {
-
-  menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+  yearElements.forEach(function (element) {
+    element.textContent = new Date().getFullYear();
   });
 
-}
 
+  // ==============================
+  // CONTACT FORM
+  // ==============================
 
-/* ================= CLOSE MOBILE MENU ================= */
+  const contactForm = document.getElementById("contactForm");
+  const formMessage = document.getElementById("formMessage");
 
-const navLinks = document.querySelectorAll("#navMenu a");
+  if (contactForm) {
 
-navLinks.forEach(link => {
+    // Automatically select course from URL
+    const programSelect = contactForm.querySelector('[name="program"]');
 
-  link.addEventListener("click", () => {
+    if (programSelect) {
 
-    if (navMenu) {
-      navMenu.classList.remove("active");
+      const urlParams = new URLSearchParams(window.location.search);
+      const selectedCourse = urlParams.get("course");
+
+      if (selectedCourse) {
+
+        const matchingOption = Array.from(programSelect.options).find(
+          option =>
+            option.value.toLowerCase() === selectedCourse.toLowerCase() ||
+            option.textContent.trim().toLowerCase() === selectedCourse.toLowerCase()
+        );
+
+        if (matchingOption) {
+          programSelect.value = matchingOption.value;
+        }
+
+      }
+
     }
 
-  });
+    contactForm.addEventListener("submit", function (event) {
 
+      event.preventDefault();
 
-/* ================= FOOTER YEAR ================= */
-
-const yearElement = document.getElementById("year");
-
-if (yearElement) {
-
-  yearElement.textContent =
-    new Date().getFullYear();
-
-}
-
-
-/* ================= CONTACT FORM ================= */
-
-const contactForm =
-  document.getElementById("contactForm");
-
-const formMessage =
-  document.getElementById("formMessage");
-
-
-if (contactForm) {
-
-  contactForm.addEventListener("submit", function(event) {
-
-    event.preventDefault();
-
-
-    const name =
-      document.getElementById("name").value.trim();
-
-    const email =
-      document.getElementById("email").value.trim();
-
-    const program =
-      document.getElementById("program").value;
-
-    const message =
-      document.getElementById("message").value.trim();
-
-
-    /* Validate required fields */
-
-    if (!name || !email || !message) {
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
 
       if (formMessage) {
 
         formMessage.textContent =
-          "Please complete all required fields.";
+          "Thank you for your enquiry! This form is currently a demo and is not connected to email yet.";
 
-        formMessage.style.color = "#b54b4b";
+        formMessage.style.color = "#b88635";
 
       }
 
-      return;
+    });
 
-    }
-
-
-    /*
-      CONTACT FORM
-
-      The current website is hosted on GitHub Pages.
-
-      GitHub Pages cannot directly send emails.
-
-      Connect this form to Formspree, EmailJS,
-      Google Forms, or another form service
-      to receive enquiries by email.
-    */
+  }
 
 
-    if (formMessage) {
+  // ==============================
+  // CAREERS APPLICATION FORM
+  // ==============================
 
-      formMessage.textContent =
-        `Thank you, ${name}! Your enquiry has been received.`;
+  const careerForm = document.getElementById("careerForm");
+  const careerMessage = document.getElementById("careerMessage");
 
-      formMessage.style.color = "#8a682c";
+  if (careerForm) {
 
-    }
+    careerForm.addEventListener("submit", function (event) {
 
+      event.preventDefault();
 
-    /* Clear the form */
+      if (!careerForm.checkValidity()) {
+        careerForm.reportValidity();
+        return;
+      }
 
-    contactForm.reset();
+      if (careerMessage) {
 
-  });
+        careerMessage.textContent =
+          "Thank you for your interest! This application form is currently a demo and is not connected to email yet.";
 
-}
+        careerMessage.style.color = "#b88635";
 
+      }
 
-/* ================= SCROLL ANIMATION ================= */
+    });
 
-const animatedElements =
-  document.querySelectorAll(
-    ".course-card, .feature, .section-content, .section-image"
-  );
-
-
-const observer =
-  new IntersectionObserver(
-    entries => {
-
-      entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-          entry.target.classList.add("show");
-
-          observer.unobserve(entry.target);
-
-        }
-
-      });
-
-    },
-    {
-      threshold: 0.12
-    }
-  );
-
-
-animatedElements.forEach(element => {
-
-  element.classList.add("hidden");
-
-  observer.observe(element);
+  }
 
 });
-
-
-/* ================= HEADER EFFECT ================= */
-
-const navbar =
-  document.querySelector(".navbar");
-
-
-if (navbar) {
-
-  window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 40) {
-
-      navbar.classList.add("scrolled");
-
-    } else {
-
-      navbar.classList.remove("scrolled");
-
-    }
-
-  });
-
-}
-```
