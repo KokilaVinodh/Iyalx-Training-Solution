@@ -1,735 +1,171 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>IyalX Training | Learn. Grow. Lead.</title>
-  <meta name="description" content="IyalX Training - Professional training programs designed to help you learn, grow and lead.">
-
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Google Font -->
+  <meta name="description" content="IyalX Training offers professional training solutions to build skills, confidence and careers.">
+  <meta name="theme-color" content="#101c2c">
+  <title>Learn. Grow. Lead. | IyalX Training</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- ================= NAVBAR ================= -->
+<header class="site-header">
+  <div class="container navbar">
+    <a class="logo" href="index.html" aria-label="IyalX Training home">
+      Iyal<span>X</span><small>TRAINING<br>LEARN. GROW. LEAD.</small>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open menu"
+      aria-expanded="false" aria-controls="primary-navigation">☰</button>
+    <nav class="nav-menu" id="primary-navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="courses.html">Courses</a>
+      <a href="trainers.html">Our Trainers</a>
+      <a href="careers.html">Careers</a>
+      <a class="nav-cta" href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
 
-  <header class="navbar">
-    <div class="container nav-container">
-
-      <a href="#home" class="logo">
-        <span class="logo-mark">I</span>
-        <span>Iyal<span class="logo-x">X</span></span>
-      </a>
-
-      <nav id="navMenu">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#courses">Courses</a>
-        <a href="#why-us">Why IyalX</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <a href="#courses" class="nav-button">Explore Courses</a>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
-        ☰
-      </button>
-
+<main>
+  <section class="hero">
+    <div class="container hero-content">
+      <p class="eyebrow">IYALX TRAINING</p>
+      <h1>Learn. <span>Grow.</span><br>Lead with confidence.</h1>
+      <p>Professional training solutions designed to develop practical skills,
+        strengthen communication and support personal and professional growth.</p>
+      <div class="hero-actions">
+        <a class="btn" href="courses.html">Explore Courses</a>
+        <a class="btn btn-outline" href="contact.html">Enquire Now</a>
+      </div>
+      <div class="stat-strip">
+        <div class="stat">
+          <strong>Practical</strong>
+          <span>Skill-focused learning</span>
+        </div>
+        <div class="stat">
+          <strong>Personal</strong>
+          <span>Growth-oriented approach</span>
+        </div>
+        <div class="stat">
+          <strong>Professional</strong>
+          <span>Career-ready development</span>
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
 
-
-  <!-- ================= HERO ================= -->
-
-  <main>
-
-    <section class="hero" id="home">
-
-      <div class="hero-bg"></div>
-
-      <div class="container hero-content">
-
-        <div class="hero-text">
-
-          <div class="eyebrow">
-            <span></span>
-            PROFESSIONAL TRAINING & DEVELOPMENT
-          </div>
-
-          <h1>
-            Learn.
-            <span>Grow.</span>
-            Lead.
-          </h1>
-
-          <p>
-            Empowering individuals with practical skills, confidence
-            and knowledge to build a better future.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#courses" class="btn btn-primary">
-              Explore Programs →
-            </a>
-
-            <a href="#about" class="btn btn-outline">
-              Discover IyalX
-            </a>
-          </div>
-
-          <div class="hero-stats">
-            <div>
-              <strong>500+</strong>
-              <span>Learners</span>
-            </div>
-
-            <div>
-              <strong>20+</strong>
-              <span>Programs</span>
-            </div>
-
-            <div>
-              <strong>95%</strong>
-              <span>Satisfaction</span>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="hero-card">
-
-          <div class="floating-card top-card">
-            <span>✦</span>
-            Learn something new today
-          </div>
-
-          <div class="hero-circle">
-            <div class="circle-inner">
-              <span>Iyal</span>
-              <b>X</b>
-            </div>
-          </div>
-
-          <div class="floating-card bottom-card">
-            <span>✓</span>
-            Skills that create impact
-          </div>
-
-        </div>
-
+  <section class="section">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">WELCOME TO IYALX</p>
+        <h2>Build skills that move you forward.</h2>
+        <p class="lead">At IyalX Training, we believe learning should create meaningful progress.
+          Our training approach focuses on knowledge, practice and confidence.</p>
+        <ul class="check-list">
+          <li>Structured learning experiences</li>
+          <li>Practical and interactive sessions</li>
+          <li>Personal and professional development</li>
+        </ul>
+        <a class="btn btn-dark" href="about.html">Discover IyalX</a>
       </div>
-    </section>
-
-
-    <!-- ================= ABOUT ================= -->
-
-    <section class="section about" id="about">
-
-      <div class="container two-column">
-
-        <div class="section-image">
-          <div class="image-box">
-            <div class="image-content">
-              <span>IYALX</span>
-              <strong>Knowledge<br>Creates<br>Possibilities.</strong>
-            </div>
-          </div>
-
-          <div class="experience-badge">
-            <strong>100%</strong>
-            <span>Learning<br>Focused</span>
-          </div>
-        </div>
-
-        <div class="section-content">
-
-          <div class="eyebrow">
-            <span></span>
-            ABOUT IYALX
-          </div>
-
-          <h2>
-            Turning knowledge into
-            <span>possibilities.</span>
-          </h2>
-
-          <p>
-            IyalX is a learning and development platform focused on
-            helping people build practical skills for today's
-            changing world.
-          </p>
-
-          <p>
-            We believe education becomes powerful when it is
-            practical, accessible and connected to real-world
-            opportunities.
-          </p>
-
-          <div class="check-list">
-
-            <div>
-              <span>✓</span>
-              Practical learning
-            </div>
-
-            <div>
-              <span>✓</span>
-              Industry-focused programs
-            </div>
-
-            <div>
-              <span>✓</span>
-              Experienced trainers
-            </div>
-
-            <div>
-              <span>✓</span>
-              Career-oriented approach
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= COURSES ================= -->
-
-    <section class="section courses" id="courses">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div class="eyebrow">
-            <span></span>
-            OUR PROGRAMS
-          </div>
-
-          <h2>
-            Learn skills that
-            <span>move you forward.</span>
-          </h2>
-
-          <p>
-            Explore our practical training programs designed
-            for personal and professional growth.
-          </p>
-
-        </div>
-
-        <div class="course-grid">
-
-          <article class="course-card">
-            <div class="course-icon">💼</div>
-            <div class="course-tag">CAREER</div>
-            <h3>Professional Skills</h3>
-            <p>
-              Build communication, workplace and professional
-              skills that help you succeed.
-            </p>
-            <div class="course-footer">
-              <span>Beginner Friendly</span>
-              <a href="#contact">Learn More →</a>
-            </div>
-          </article>
-
-          <article class="course-card featured">
-
-            <div class="course-icon">🎤</div>
-            <div class="course-tag">COMMUNICATION</div>
-
-            <h3>English & Communication</h3>
-
-            <p>
-              Improve spoken English, confidence and
-              professional communication.
-            </p>
-
-            <div class="course-footer">
-              <span>All Levels</span>
-              <a href="#contact">Learn More →</a>
-            </div>
-
-          </article>
-
-          <article class="course-card">
-
-            <div class="course-icon">🚀</div>
-            <div class="course-tag">DEVELOPMENT</div>
-
-            <h3>Personal Growth</h3>
-
-            <p>
-              Develop confidence, leadership and habits
-              that support long-term growth.
-            </p>
-
-            <div class="course-footer">
-              <span>Beginner Friendly</span>
-              <a href="#contact">Learn More →</a>
-            </div>
-
-          </article>
-
-          <article class="course-card">
-
-            
-<!-- New Course: Aptitude Training -->
-
-  <div class="course-icon">🧠</div>
-
-  <div class="course-tag">
-    CAREER PREPARATION
-  </div>
-
-  <h3>Aptitude Training</h3>
-
-  <p>
-    Strengthen quantitative aptitude, numerical
-    ability, mathematical skills and problem-solving
-    techniques for competitive exams and career growth.
-  </p>
-
-  <div class="course-footer">
-    <span>Beginner Friendly</span>
-    <a href="#contact">Learn More →</a>
-  </div>
-
-</article>
-
-<!-- New Course: Logical Reasoning -->
-<article class="course-card">
-
-  <div class="course-icon">🎯</div>
-
-  <div class="course-tag">
-    REASONING
-  </div>
-
-  <h3>Logical Reasoning</h3>
-
-  <p>
-    Develop logical thinking, analytical ability,
-    pattern recognition and decision-making skills
-    through practical reasoning exercises.
-  </p>
-
-  <div class="course-footer">
-    <span>All Levels</span>
-    <a href="#contact">Learn More →</a>
-  </div>
-
-</article>
-          
-
-          <article class="course-card">
-
-            <div class="course-icon">🎯</div>
-            <div class="course-tag">CUSTOM</div>
-
-            <h3>Corporate Training</h3>
-
-            <p>
-              Customized training programs for teams,
-              organizations and institutions.
-            </p>
-
-            <div class="course-footer">
-              <span>For Organizations</span>
-              <a href="#contact">Enquire →</a>
-            </div>
-
-          </article>
-
-        </div>
-      </div>
-
-    </section>
-
-
-    <!-- ================= WHY IYALX ================= -->
-
-    <section class="section why-us" id="why-us">
-
-      <div class="container">
-
-        <div class="section-heading center">
-
-          <div class="eyebrow">
-            <span></span>
-            WHY IYALX
-          </div>
-
-          <h2>
-            More than just
-            <span>training.</span>
-          </h2>
-
-          <p>
-            We focus on creating meaningful learning experiences
-            that translate into real-world confidence.
-          </p>
-
-        </div>
-
-        <div class="features">
-
-          <div class="feature">
-            <div class="feature-number">01</div>
-            <div>
-              <h3>Practical Learning</h3>
-              <p>
-                Learn through real-world examples,
-                activities and practical applications.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature">
-            <div class="feature-number">02</div>
-            <div>
-              <h3>Expert Guidance</h3>
-              <p>
-                Learn from trainers who understand
-                practical workplace requirements.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature">
-            <div class="feature-number">03</div>
-            <div>
-              <h3>Flexible Learning</h3>
-              <p>
-                Training formats designed to fit
-                different learning needs and schedules.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature">
-            <div class="feature-number">04</div>
-            <div>
-              <h3>Certificate Programs</h3>
-              <p>
-                Complete eligible programs and
-                receive certificates of completion.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= CTA ================= -->
-
-    <section class="cta">
-
-      <div class="container cta-content">
-
+      <div class="visual-panel">
         <div>
-
-          <div class="eyebrow light">
-            <span></span>
-            START YOUR JOURNEY
-          </div>
-
-          <h2>
-            Your next chapter
-            <br>
-            starts with <span>IyalX.</span>
-          </h2>
-
+          <div class="mark">IyalX</div>
+          <strong>Learn. Grow. Lead.</strong>
+          <p style="color:#d1d9e2">Training for tomorrow's opportunities</p>
         </div>
-
-        <a href="#contact" class="btn btn-light">
-          Get Started →
-        </a>
-
       </div>
+    </div>
+  </section>
 
-    </section>
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-heading center">
+        <p class="eyebrow">WHAT WE OFFER</p>
+        <h2>Explore our training programs</h2>
+        <p>Choose a learning path that supports your goals and helps you take the next step.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card course-card">
+          <div class="icon-box">01</div>
+          <h3>Digital Skills</h3>
+          <p>Build confidence with essential digital tools and workplace technology.</p>
+          <a class="course-link" href="courses.html">Explore course →</a>
+        </article>
+        <article class="card course-card">
+          <div class="icon-box">02</div>
+          <h3>Aptitude Training</h3>
+          <p>Develop numerical, verbal and analytical problem-solving skills.</p>
+          <a class="course-link" href="courses.html">Explore course →</a>
+        </article>
+        <article class="card course-card">
+          <div class="icon-box">03</div>
+          <h3>English & Communication</h3>
+          <p>Improve communication, presentation and professional interaction.</p>
+          <a class="course-link" href="courses.html">Explore course →</a>
+        </article>
+      </div>
+      <div style="text-align:center;margin-top:30px">
+        <a class="btn btn-dark" href="courses.html">View All Courses</a>
+      </div>
+    </div>
+  </section>
 
-
-    <!-- ================= CONTACT ================= -->
-
-    <section class="section contact" id="contact">
-
-      <div class="container contact-grid">
-
-        <div class="contact-info">
-
-          <div class="eyebrow">
-            <span></span>
-            CONTACT US
-          </div>
-
-          <h2>
-            Let's build your
-            <span>next step.</span>
-          </h2>
-
-          <p>
-            Interested in a training program or looking for
-            customized training? Send us a message.
-          </p>
-
-          <div class="contact-details">
-
-            <!-- EMAIL -->
-            <div>
-              <span>✉</span>
-              <div>
-                <small>Email</small>
-                <strong>
-                  <a href="mailto:VinodhKumar@iyalx.com">
-                    VinodhKumar@iyalx.com
-                  </a>
-                </strong>
-              </div>
-            </div>
-
-            <!-- PHONE -->
-            <div>
-              <span>☎</span>
-              <div>
-                <small>Phone</small>
-                <strong>
-                  <a href="tel:+919566964304">
-                    +91 9566964304
-                  </a>
-                </strong>
-              </div>
-            </div>
-
-            <!-- LOCATION -->
-            <div>
-              <span>⌖</span>
-              <div>
-                <small>Location</small>
-                <strong>
-                  FD 161, First Floor, No. 19/35,
-                  Mount Road, Little Mount,
-                  Chennai - 600015, Tamil Nadu
-                </strong>
-              </div>
-            </div>
-
-          </div>
-
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <p class="eyebrow">TAKE THE NEXT STEP</p>
+          <h2>Ready to grow with IyalX?</h2>
+          <p>Tell us what you want to learn and we'll help you explore the right program.</p>
         </div>
-
-
-        <!-- CONTACT FORM -->
-
-        <form class="contact-form" id="contactForm">
-
-          <div class="form-row">
-
-            <div class="form-group">
-
-              <label for="name">
-                Your Name
-              </label>
-
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-                required
-              >
-
-            </div>
-
-
-            <div class="form-group">
-
-              <label for="email">
-                Email
-              </label>
-
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                required
-              >
-
-            </div>
-
-          </div>
-
-
-          <div class="form-group">
-
-            <label for="program">
-              Interested Program
-            </label>
-
-            <select id="program" name="program">
-
-              <option value="">
-                Select a program
-              </option>
-
-              <option value="Professional Skills">
-                Professional Skills
-              </option>
-
-              <option value="English & Communication">
-                English & Communication
-              </option>
-
-              <option value="Personal Growth">
-                Personal Growth
-              </option>
-              
-              <option value="Aptitude Training">
-                Aptitude Training
-              </option>
-
-              <option value="Logical Reasoning">
-                Logical Reasoning
-              </option>
-
-              <option value="Corporate Training">
-                Corporate Training
-              </option>
-
-            </select>
-
-          </div>
-
-
-          <div class="form-group">
-
-            <label for="message">
-              Message
-            </label>
-
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="Tell us how we can help..."
-              required
-            ></textarea>
-
-          </div>
-
-
-          <button
-            type="submit"
-            class="btn btn-primary submit-button"
-          >
-            Send Enquiry →
-          </button>
-
-          <div
-            id="formMessage"
-            class="form-message"
-          ></div>
-
-        </form>
-
+        <a class="btn" href="contact.html">Contact Our Team</a>
       </div>
+    </div>
+  </section>
+</main>
 
-    </section>
-
-  </main>
-
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer>
-
-    <div class="container footer-main">
-
-      <div class="footer-brand">
-
-        <a href="#home" class="logo">
-          <span class="logo-mark">I</span>
-          <span>Iyal<span class="logo-x">X</span></span>
-        </a>
-
-        <p>
-          Learn. Grow. Lead.
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Iyal<span>X</span></a>
+        <p style="margin-top:15px;max-width:360px">
+          Professional training solutions designed to help individuals
+          learn, grow and lead with confidence.
         </p>
-
-        <p class="footer-description">
-          Practical learning for a better tomorrow.
-        </p>
-
       </div>
-
-
-      <div class="footer-links">
-
-        <div>
-
-          <h4>Explore</h4>
-
-          <a href="#about">About</a>
-          <a href="#courses">Courses</a>
-          <a href="#why-us">Why IyalX</a>
-
+      <div>
+        <h3>Explore</h3>
+        <div class="footer-links">
+          <a href="about.html">About Us</a>
+          <a href="courses.html">Our Courses</a>
+          <a href="trainers.html">Our Trainers</a>
+          <a href="careers.html">Careers</a>
         </div>
-
-
-        <div>
-
-          <h4>Connect</h4>
-
-          <a href="#contact">Contact</a>
-
-          <!-- Replace these with your actual social media links -->
-          <a href="#" target="_blank">Instagram</a>
-          <a href="#" target="_blank">LinkedIn</a>
-
-        </div>
-
       </div>
-
+      <div>
+        <h3>Get in touch</h3>
+        <div class="footer-links">
+          <a href="contact.html">Contact Us</a>
+          <a href="contact.html#enquiry">Course Enquiry</a>
+        </div>
+        <p class="small-note">Add your official email, phone number and address on the Contact page.</p>
+      </div>
     </div>
-
-
-    <div class="container footer-bottom">
-
-      <p>
-        © <span id="year"></span>
-        IyalX Training. All rights reserved.
-      </p>
-
-      <p>
-        Learn. Grow. Lead.
-      </p>
-
+    <div class="footer-bottom">
+      <span>© <span data-year></span> IyalX Training. All rights reserved.</span>
+      <span>Learn. Grow. Lead.</span>
     </div>
+  </div>
+</footer>
 
-  </footer>
-
-
-  <!-- ================= JAVASCRIPT ================= -->
-
-  <script src="script.js"></script>
-
+<script src="script.js" defer></script>
 </body>
 </html>
-```
